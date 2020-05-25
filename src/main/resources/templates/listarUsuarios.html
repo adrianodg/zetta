@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Desafio Zetta</title>
+    </head>
+    <body>
+
+        <h1>Lista de Usuários</h1>
+        <div th:each="usuario : ${usuarios}"></div>
+            <div class="row">
+
+                <p><span th:text="${usuario.idUsuario}"></span></p>
+                <p><span th:text="${usuario.nome}"></span></p>
+                <p><span th:text="${usuario.cpf}"></span></p>
+                <p><span th:text="${usuario.dataNascimento}"></span></p>
+                <p><span th:text="${usuario.sexo}"></span></p>
+                <p><span th:text="${usuario.dataCadastro}"></span></p>
+                <p><span th:text="${usuario.cargo}"></span></p>
+
+            </div>
+
+    </body>
+</html>

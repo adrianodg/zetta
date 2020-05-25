@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Desafio Zetta</title>
+    </head>
+    <body>
+
+        <h1>Lista de Perfis</h1>
+        <div th:each="perfil : ${perfis}"></div>
+            <div class="row">
+
+                <p><span th:text="${perfil.idPerfil}"></span></p>
+                <p><span th:text="${perfil.nomePerfil}"></span></p>
+
+            </div>
+
+    </body>
+</html>

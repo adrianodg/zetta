@@ -7,12 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PerfilController {
 
     @Autowired
     private PerfilRepository pf;
+
+    @RequestMapping("/perfis")
+    public String red() {
+        return "perfis";
+    }
 
     @GetMapping("/cadastrarPerfil")
     public String form() {
@@ -26,5 +33,16 @@ public class PerfilController {
 
         return "redirect:/cadastrarPerfil";
     }
+
+    @RequestMapping("/listarPerfis")
+    public String listarPerfis(){
+
+        ModelAndView mv = new ModelAndView("listarPerfis");
+        Iterable<Perfil> perfis = pf.findAll();
+        mv.addObject("perfis", perfis);
+        return mv;
+    }
+
+    
 
 }
