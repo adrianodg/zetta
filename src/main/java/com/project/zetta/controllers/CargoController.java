@@ -5,7 +5,6 @@ import com.project.zetta.repository.CargoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -15,13 +14,13 @@ public class CargoController {
     @Autowired
     private CargoRepository cg;
 
-    @GetMapping(value = "/cadastrarCargo")
+    @GetMapping("/cadastrarCargo")
     public String form() {
         return "formCargo";
     }
 
-    @PostMapping(value = "/cadastrarCargo")
-    public String form(@Validated Cargo cargo) {
+    @PostMapping("/cadastrarCargo")
+    public String form(Cargo cargo) {
 
         cg.save(cargo);
 
