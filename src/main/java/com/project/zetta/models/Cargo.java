@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Cargo implements Serializable{
+public class Cargo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -22,4 +22,5 @@ public class Cargo implements Serializable{
 
     @Column(nullable = false)
     private String nomeCargo;
+
 }
