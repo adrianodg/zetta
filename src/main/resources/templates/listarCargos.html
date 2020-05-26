@@ -7,13 +7,13 @@
     <body>
 
         <h1>Lista de Cargos</h1>
-        <div th:each="cargo : ${cargos}"></div>
+        <div th:each="cargo : ${cargos}">
             <div class="row">
 
                 <p><span th:text="${cargo.idCargo}"></span></p>
                 <p><span th:text="${cargo.nomeCargo}"></span></p>
 
             </div>
-
+        </div>
     </body>
 </html>

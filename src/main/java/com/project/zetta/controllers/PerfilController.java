@@ -35,11 +35,11 @@ public class PerfilController {
     }
 
     @RequestMapping("/listarPerfis")
-    public String listarPerfis(){
+    public ModelAndView listarPerfis(){
 
         ModelAndView mv = new ModelAndView("listarPerfis");
-        Iterable<Perfil> perfis = pf.findAll();
-        mv.addObject("perfis", perfis);
+        Iterable<Perfil> perfil = pf.findAll();
+        mv.addObject("perfil", perfil);
         return mv;
     }
 

@@ -35,11 +35,11 @@ public class UsuarioController {
     }
 
     @RequestMapping("/listarUsuarios")
-    public String listarUsuarios(){
+    public ModelAndView listarUsuarios(){
 
         ModelAndView mv = new ModelAndView("listarUsuarios");
-        Iterable<Usuario> usuarios = us.findAll();
-        mv.addObject("usuarios", usuarios);
+        Iterable<Usuario> usuario = us.findAll();
+        mv.addObject("usuario", usuario);
         return mv;
     }
 

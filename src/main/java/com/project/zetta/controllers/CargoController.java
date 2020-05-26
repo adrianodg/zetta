@@ -35,11 +35,11 @@ public class CargoController {
     }
 
     @RequestMapping("/listarCargos")
-    public String listarCargos(){
+    public ModelAndView listarCargos(){
 
         ModelAndView mv = new ModelAndView("listarCargos");
-        Iterable<Cargo> cargos = cg.findAll();
-        mv.addObject("cargos", cargos);
+        Iterable<Cargo> cargo = cg.findAll();
+        mv.addObject("cargo", cargo);
         return mv;
     }
 
