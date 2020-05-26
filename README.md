@@ -32,3 +32,6 @@
 ### IDEs utilizadas:
 - Visual Studio Code
 - MYSQL Workbench
+-----------------------------------
+### Esquema conceitual do Banco de Dados
+<img src="esquemaBD.png">
