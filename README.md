@@ -37,4 +37,3 @@
 -----------------------------------
 ### Esquema conceitual do Banco de Dados
 <img src="esquemaBD.png">
-
